@@ -117,8 +117,16 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"main.js":[function(require,module,exports) {
+})({"css.js":[function(require,module,exports) {
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var string = ".skin * {\n    box-sizing: border-box;\n    margin: 0%;\n    padding: 0%;\n}\n\n.skin *::before,\n.skin *::after {\n    box-sizing: border-box;\n}\n\n    \n\n\n.skin {\n    position: relative;\n    background-color: #94cfee;\n    min-height: 50vh;\n}\n.skin >img {\n    position: relative;\n    left: 50%;\n    margin-left: 220px;\n    width: 150px; \n    height: 150px;\n    animation:descend 1200ms infinite;\n}\n\n\n@keyframes descend {\n    0% {\n        transform: translateY(0px);\n    }\n\n    33% {\n        transform: translateY(250px);\n    }\n\n    66% {\n        transform: translateY(500px);\n    }\n\n    100% {\n        transform: translateY(750px);\n    }\n}\n\n\n\n.light {\n\n    width: 80px;\n    height: 100px;\n    position: absolute;\n    left: 50%;\n    top: 25px;\n    margin-left: -60px;\n    background-color: #C5E0EB;\n    border-radius: 90% / 100%\n}\n\n.nose {\n    background-color: black;\n    width: 10px;\n    height: 3px;\n    position: absolute;\n    left: 50%;\n    margin-left: 5px;\n    top: 240px;\n    border-radius: 50%/100%;\n\n}\n\n.nose.right {\n    transform: translateX(40px) rotate(-25deg);\n}\n\n.nose.left {\n    transform: translateX(-40px)rotate(25deg)\n}\n\n.eye {\n    border: 2px solid black;\n    width: 80px;\n    height: 100px;\n    position: absolute;\n    left: 50%;\n    top: 100px;\n    margin-left: -32px;\n    background-color: #264829;\n    border-radius: 70% / 100% 90% 0 0;\n}\n\n.eye .little {\n    border: 2px solid black;\n    width: 40px;\n    height: 70px;\n    position: absolute;\n    left: 50%;\n    top: 15px;\n    margin-left: -20px;\n    background-color: black;\n    border-radius: 75px/150px;\n}\n\n.eye::before {\n    content: '';\n    display: block;\n    border: 3px solid 000;\n    width: 30px;\n    height: 30px;\n    background-color: #fff;\n    border-radius: 50%;\n    position: relative;\n    left: 15px;\n    top: 15px;\n    z-index: 3;\n\n}\n\n.eye.left {\n    transform: translateX(-150px);\n}\n\n.eye.right {\n    transform: translateX(150px);\n}\n\n.brow {\n    background-color: black;\n    width: 20px;\n    height: 3px;\n    position: absolute;\n    left: 50%;\n    top: 100px;\n    border-radius: 50%/100%;\n\n}\n\n.brow.left {\n    transform: translateX(-100px)rotate(25deg)\n}\n\n.brow.right {\n    transform: translateX(100px)rotate(-25deg)\n}\n\n.mouth {\n\n    width: 200px;\n    height: 200px;\n    position: absolute;\n    left: 50%;\n    top: 178px;\n    margin-left: -100px;\n}\n\n.mouth .up {\n    position: relative;\n    top: 75px;\n    z-index: 0;\n}\n\n.mouth .up .lip {\n    border: 3px solid black;\n    height: 30px;\n    width: 150px;\n    position: relative;\n    position: absolute;\n    background-color: #94cfee;\n    border-top-color: transparent;\n    border-right-color: transparent;\n    left: 50%;\n    margin-left: -70px;\n}\n\n.mouth .up .lip.left {\n    border-radius: 0 0 0 50px;\n    transform: rotate(-5deg) translateX(-158px);\n}\n\n.mouth .up .lip.right {\n    border-radius: 0 0 50px 0;\n    transform: rotate(5deg) translateX(169px);\n}\n\n.mouth .up .lip::before {\n    content: '';\n    display: block;\n    width: 10px;\n    height: 30px;\n    position: absolute;\n    bottom: 0;\n    background-color: #94cfee;\n}\n\n.mouth .up .lip.left::before {\n    right: -6px;\n}\n\n.mouth .up .lip.right::before {\n    left: -6px;\n}\n\n.mouth .down {\n    background-color: black;\n    width: 100px;\n    height: 3px;\n    position: absolute;\n    left: 50%;\n    margin-left: -40px;\n    top: 130px;\n    border-radius: 10%/100%;\n\n}\n\n.mouth .down.left {\n    transform: translateX(-44px)rotate(25deg)\n}\n\n.mouth .down.right {\n    transform: translateX(44px)rotate(-25deg)\n}\n\n.shadow {\n    width: 350px;\n    height: 100px;\n    position: absolute;\n    left: 50%;\n    top: 350px;\n    margin-left: -120px;\n    border-radius: 50%;\n    box-shadow: 15px 10px 0 0 #59A1B7;\n}\n";
+var _default = string;
+exports.default = _default;
 },{}],"C:/Users/bkh/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -147,7 +155,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55655" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56185" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -323,5 +331,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["C:/Users/bkh/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","main.js"], null)
-//# sourceMappingURL=/main.1f19ae8e.js.map
+},{}]},{},["C:/Users/bkh/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","css.js"], null)
+//# sourceMappingURL=/css.16d824bf.js.map
